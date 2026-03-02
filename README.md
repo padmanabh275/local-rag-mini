@@ -91,7 +91,7 @@ Dependencies: **PyTorch**, **sentence-transformers**, **Streamlit**, **tqdm**. N
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/local-rag-mini.git
+   git clone https://github.com/padmanabh275/local-rag-mini.git
    cd local-rag-mini
    ```
 
