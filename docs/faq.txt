@@ -1,0 +1,16 @@
+FAQ - Local RAG
+
+Q: Do I need a GPU?
+A: No. The embedding model (all-MiniLM-L6-v2) and PyTorch index run fine on CPU. A normal laptop is enough.
+
+Q: What file format is supported?
+A: Only plain text files with the .txt extension. Files are read as UTF-8.
+
+Q: How are answers generated?
+A: The system retrieves the top-k chunks most similar to your question. The "answer" is built by selecting sentences from those chunks only. No external LLM is used, so answers do not invent facts beyond the retrieved text.
+
+Q: Can I use more than three chunks?
+A: Yes. Use the --k option in query.py, for example: python query.py --question "Your question" --k 5
+
+Q: Where is the index stored?
+A: By default in the data/ folder: embeddings.npy (embedding matrix) and meta.json (chunk texts and source filenames).

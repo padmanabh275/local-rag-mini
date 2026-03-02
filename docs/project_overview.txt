@@ -1,0 +1,11 @@
+Local RAG Mini Project - Overview
+
+This project is a minimal Retrieval-Augmented Generation (RAG) pipeline that runs entirely on your laptop. No GPU or cloud APIs are required.
+
+What it does:
+- Ingests plain text (.txt) files from a docs/ folder.
+- Splits documents into overlapping chunks and builds a PyTorch vector index (embeddings stored as .pt).
+- Embeddings are computed with the sentence-transformers library (all-MiniLM-L6-v2 model) on PyTorch.
+- You can then ask questions and get the top matching chunks plus a short answer built only from retrieved text, so answers stay grounded and do not hallucinate.
+
+The main scripts are ingest.py (build the index) and query.py (ask questions and get answers).

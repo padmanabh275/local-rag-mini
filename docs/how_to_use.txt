@@ -1,0 +1,27 @@
+How to use the RAG pipeline
+
+Step 1: Setup
+Create a virtual environment and install dependencies from requirements.txt. Python 3.9 or newer is recommended.
+
+  python -m venv venv
+  source venv/bin/activate   (on Windows: venv\Scripts\activate)
+  pip install -r requirements.txt
+
+Step 2: Add your documents
+Place any .txt files you want to search in the docs/ folder. The ingest script will find all files ending in .txt recursively.
+
+Step 3: Build the index
+Run ingest.py with default folders (docs/ and data/):
+
+  python ingest.py
+
+Or specify paths:
+
+  python ingest.py --docs_dir docs --output_dir data --chunk_size 500 --chunk_overlap 100
+
+Step 4: Query
+Ask a question and get the top chunks plus a grounded answer:
+
+  python query.py --question "How do I build the index?"
+
+You can also run query.py without --question to enter your question interactively. Use --k 3 to retrieve the top 3 chunks (default).
