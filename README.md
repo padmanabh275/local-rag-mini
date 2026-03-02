@@ -161,7 +161,7 @@ python query.py --question "Your question" --k 5
 streamlit run app.py
 ```
 
-Use the text input for your question and the slider to choose how many chunks to retrieve (default 3). Results show source filename and snippet per chunk, plus the grounded answer.
+If the index does not exist yet, the app shows a **Build index now** button—click it to build the index from `docs/` (no need to run `ingest.py` in the terminal). Then use the text input for your question and the slider to choose how many chunks to retrieve (default 3). Results show source filename and snippet per chunk, plus the grounded answer.
 
 ---
 
